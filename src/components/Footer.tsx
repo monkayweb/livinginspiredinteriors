@@ -96,6 +96,20 @@ export default function Footer() {
           <span className="t-small opacity-50">
             {site.name}, established {site.established}
           </span>
+
+          <span className="t-small opacity-50">
+            Developed by{" "}
+            <a
+              href={site.credit.url}
+              target="_blank"
+              rel="noreferrer"
+              data-cursor
+              className="link-underline transition-opacity duration-500 hover:opacity-100"
+            >
+              {site.credit.name}
+            </a>
+          </span>
+
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 0.5 }}

@@ -21,6 +21,10 @@ export const site = {
     name: "Tanya Solomon",
     role: "Founder and Creative Director",
   },
+  credit: {
+    name: "Monkay",
+    url: "https://monkay.co",
+  },
 };
 
 export const nav = [
