@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0b0b;
+  --color-paper: #f2efe9;
+  --color-paper-deep: #e6e1d8;
+  --color-stone: #c3bbaf;
+  --color-gold: #bd9747;
+  --color-gold-light: #cca553;
+
+  --font-display: var(--font-display), "Times New Roman", serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --spacing-gutter: clamp(1.25rem, 4vw, 4rem);
+}
+
+:root {
+  /*
+   * Dark by default. Every page opens on a dark section, and these two feed
+   * the fixed header and the cursor. Defaulting them to paper painted a white
+   * header bar on first paint, before ThemeSections had run.
+   */
+  --bg: var(--color-ink);
+  --fg: var(--color-paper);
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  background: var(--color-ink);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/*
+ * body used to transition background-color and colour, which meant every
+ * section boundary kicked off 0.8s of full tree style recalculation because
+ * colour inherits. Sections paint their own opaque background and declare
+ * their own text colour, so --bg and --fg are now read only by the header and
+ * the cursor.
+ */
+body {
+  /* Transparent so the ink canvas shows through instead of a white body box
+     during the first paint and any overscroll. */
+  background: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  letter-spacing: -0.006em;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.theme-dark ::selection {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Typography ------------------------------------------------------------- */
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Chablis ships no italic, so the accent line is separated by colour. */
+.display-accent {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 300;
+  color: var(--color-stone);
+}
+
+.t-xl {
+  font-size: clamp(2.4rem, 6.6vw, 6.75rem);
+}
+.t-lg {
+  font-size: clamp(1.9rem, 4.2vw, 4rem);
+}
+.t-md {
+  font-size: clamp(1.45rem, 2.5vw, 2.4rem);
+}
+.t-body {
+  font-size: clamp(1rem, 1.08vw, 1.09rem);
+  line-height: 1.68;
+  font-weight: 300;
+  letter-spacing: -0.006em;
+}
+.t-small {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0.004em;
+}
+
+/* Layout ----------------------------------------------------------------- */
+
+.shell {
+  padding-inline: var(--spacing-gutter);
+}
+
+/* Reveal primitives ------------------------------------------------------ */
+
+/*
+ * Reveal masks clip to the line box, which cuts the tails off p, y, g and j.
+ *
+ * An em based padding does not work here: the font size lives on the animated
+ * child, not on this element, so 0.3em resolved against the inherited 16px
+ * rather than the 100px+ heading. inset() percentages resolve against this
+ * element's own box height, which is the child's line box, so the clip scales
+ * with the type at every size. Reveal animations start at y 150% to stay
+ * hidden behind the extended region.
+ */
+.mask-line {
+  display: block;
+  clip-path: inset(-18% 0 -34% 0);
+}
+
+/* Links ------------------------------------------------------------------ */
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Media ------------------------------------------------------------------ */
+
+.media {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-paper-deep);
+}
+
+/*
+ * Deliberately no will-change here. Forcing a composited layer on every
+ * parallax image pins each full size bitmap in GPU memory at once, which
+ * costs far more than the paint it saves. Motion promotes while animating.
+ */
+
+/* Header ----------------------------------------------------------------- */
+
+.site-header {
+  color: var(--fg);
+  background: var(--bg);
+  box-shadow: inset 0 -1px 0 rgb(from var(--fg) r g b / 0.12);
+  transition:
+    color 0.8s var(--ease-out-expo),
+    background-color 0.8s var(--ease-out-expo);
+}
+
+.site-header.is-menu-open {
+  color: var(--color-paper);
+  background: var(--color-ink);
+  box-shadow: none;
+  transition:
+    color 0.25s linear,
+    background-color 0.25s linear;
+}
+
+/* Overlays --------------------------------------------------------------- */
+
+html[data-overlay="1"] .site-header {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s linear;
+}
+
+/* Scrollbar -------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 11, 11, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.cursor-dot {
+  background: var(--fg);
+}
+
+.cursor-label {
+  color: var(--bg);
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-none-desktop,
+  .cursor-none-desktop * {
+    cursor: none;
+  }
+}
