@@ -94,13 +94,15 @@ export default function Hero() {
             className="mt-4 flex items-baseline justify-between"
           >
             <span className="t-small text-paper/40">Sandown Residence</span>
-            <span className="t-small text-paper/40">Johannesburg</span>
+            <span className="t-small hidden text-paper/40 md:block">
+              Johannesburg
+            </span>
           </motion.div>
         </motion.div>
       </div>
 
       {/* Base bar --------------------------------------------------- */}
-      <div className="shell pb-7 md:absolute md:inset-x-0 md:bottom-0">
+      <div className="shell pb-7 pt-10 md:absolute md:inset-x-0 md:bottom-0 md:pt-0">
         <motion.div
           className="h-px w-full origin-left bg-paper/20"
           initial={{ scaleX: 0 }}

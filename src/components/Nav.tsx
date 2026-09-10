@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import Logo from "./Logo";
 import { nav, site } from "@/content/site";
@@ -27,9 +27,40 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
 
+  /*
+   * Direction detection with hysteresis. Reading the raw delta on every
+   * scroll event made the bar flap: touch momentum and trackpad inertia both
+   * produce tiny opposite deltas, and each one flipped the state. The header
+   * now only moves after a sustained run in one direction.
+   */
+  const lastY = useRef(0);
+  const anchor = useRef(0);
+  const dir = useRef(0);
+
   useMotionValueEvent(scrollY, "change", (y) => {
-    const prev = scrollY.getPrevious() ?? 0;
-    setHidden(y > prev && y > 220 && !open);
+    if (open) return;
+
+    if (y < 140) {
+      lastY.current = y;
+      anchor.current = y;
+      setHidden(false);
+      return;
+    }
+
+    const delta = y - lastY.current;
+    lastY.current = y;
+    if (Math.abs(delta) < 2) return;
+
+    const next = delta > 0 ? 1 : -1;
+    if (next !== dir.current) {
+      dir.current = next;
+      anchor.current = y;
+      return;
+    }
+
+    if (Math.abs(y - anchor.current) < 80) return;
+    anchor.current = y;
+    setHidden(next === 1);
   });
 
   useEffect(() => {
