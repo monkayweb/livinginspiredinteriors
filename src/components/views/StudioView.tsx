@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { approach, collaborators, profile, site } from "@/content/site";
+import {
+  approach,
+  collaborators,
+  distinction,
+  profile,
+  site,
+} from "@/content/site";
 import PageHeader from "@/components/PageHeader";
 import ParallaxMedia from "@/components/ParallaxMedia";
 import {
@@ -59,9 +65,31 @@ export default function StudioView() {
       <section data-surface="light" className="bg-paper text-ink pb-28 md:pb-40">
         <div className="shell">
           <ScrollText
-            text="We believe successful design should not only be visually beautiful. It should improve wellbeing, encourage connection and stand the test of time."
+            text="Inspiring spaces. Curating lives. Design is not only about style. It is about soul, how we live, how we connect and how our spaces remind us who we are."
             className="display max-w-[24ch] text-[7vw] leading-[1.08] md:max-w-[22ch] md:text-[3.6vw]"
           />
+        </div>
+      </section>
+
+      <section data-surface="light" className="bg-paper pb-28 text-ink md:pb-40">
+        <div className="shell grid gap-12 md:grid-cols-12 md:gap-10">
+          <div className="md:col-span-4">
+            <FadeIn>
+              <p className="t-small opacity-40">What sets us apart</p>
+            </FadeIn>
+            <SplitWords
+              as="h2"
+              text={distinction.title}
+              className="display t-lg mt-6"
+            />
+          </div>
+          <div className="flex flex-col gap-7 md:col-span-7 md:col-start-6 md:pt-10">
+            {distinction.paragraphs.map((paragraph, index) => (
+              <FadeIn key={paragraph} delay={index * 0.06}>
+                <p className="t-body max-w-[62ch] opacity-75">{paragraph}</p>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

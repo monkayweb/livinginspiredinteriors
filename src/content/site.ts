@@ -38,7 +38,7 @@ export const manifesto =
   "Our mission is to transform everyday spaces into inspired sanctuaries that reflect the soul, style and aspirations of those who inhabit them.";
 
 export const manifestoSupport =
-  "We design with intention, blending elegance, functionality and wellness to craft environments that spark joy, nurture connection and elevate daily living. Rooted in collaboration, conscious craftsmanship and storytelling through design, we curate interiors that are both aesthetically striking and deeply personal.";
+  "Led by founder and creative director Tanya Solomon, we design with intention, blending elegance, functionality and wellness to craft environments that spark joy, nurture connection and elevate daily living. Rooted in collaboration, conscious craftsmanship and storytelling through design, we curate interiors that are both aesthetically striking and deeply personal.";
 
 export const profile = [
   "Living Inspired Interiors is a boutique interior architecture and design studio specialising in bespoke residential and commercial interiors throughout South Africa and internationally.",
@@ -49,36 +49,44 @@ export const profile = [
 
 export const capabilities = [
   {
-    title: "Interior architecture",
-    body: "Spatial planning, structural reconfiguration and the detailing that turns a shell into a home.",
+    title: "Residential and commercial interiors",
+    body: "Luxury homes, executive offices and boutique hospitality spaces, each tailored to the people who live, work and gather there.",
     image: "/images/sandown-dining-hero.jpg",
   },
   {
-    title: "Full scale renovations and new builds",
-    body: "End to end delivery from first drawing to final styling, on site and on programme.",
+    title: "New builds and renovations",
+    body: "Interior planning, space planning and full home transformations, from the earliest architectural decisions to the finished interior.",
     image: "/images/athol-covered-patio.jpg",
   },
   {
-    title: "Bespoke furniture and joinery",
-    body: "Pieces drawn for one room only, made with makers we have worked with for years.",
+    title: "Kitchens, bathrooms and joinery",
+    body: "Detailed kitchen, bathroom and cloakroom schemes, together with bespoke cabinetry, panelling and custom architectural elements.",
     image: "/images/sandown-dining-detail.jpg",
   },
   {
-    title: "Lighting design",
-    body: "Sculptural installations and layered ambient schemes that shape a space after dark.",
+    title: "Furniture, lighting and decoration",
+    body: "Custom furniture, decorative lighting, window treatments, soft furnishings, rugs, wall finishes and considered room refreshes.",
     image: "/images/athol-pendant-detail.jpg",
   },
   {
-    title: "Art curation",
-    body: "Work selected for the room and the owner, never for the wall alone.",
+    title: "Curation and specification",
+    body: "Concepts, mood boards and photorealistic renders through to material palettes, paint colours, art, accessories and complete FF&E specifications.",
     image: "/images/sandown-tv-lounge-art.jpg",
   },
   {
-    title: "Project management",
-    body: "One point of contact across contractors, suppliers and installers for the life of the build.",
+    title: "Turnkey project delivery",
+    body: "Procurement, supplier management, custom manufacturing, project coordination, installation and final styling, overseen as one continuous process.",
     image: "/images/sandown-formal-lounge.jpg",
   },
 ];
+
+export const distinction = {
+  title: "We curate lifestyles, not simply spaces.",
+  paragraphs: [
+    "Every project is approached with meticulous attention to detail, balancing beauty with practicality while collaborating with South Africa's finest artisans, manufacturers and suppliers. Exceptional design emerges through the thoughtful layering of texture, material, lighting, bespoke craftsmanship and timeless pieces, creating spaces with enduring character.",
+    "Our hands-on approach means we personally oversee every stage of the journey, from initial concept and technical detailing through procurement, custom manufacturing, installation and final styling. The result is a highly personalised interior, delivered with professionalism, care and a clear sense of purpose.",
+  ],
+};
 
 export const approach = [
   {

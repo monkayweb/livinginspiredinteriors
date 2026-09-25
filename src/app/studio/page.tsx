@@ -4,7 +4,7 @@ import StudioView from "@/components/views/StudioView";
 export const metadata: Metadata = {
   title: "Studio",
   description:
-    "Living Inspired Interiors is led by founder and creative director Tanya Solomon. A boutique interior architecture and design studio in Johannesburg.",
+    "Founded in 2020 by Tanya Solomon, Living Inspired Interiors creates highly personalised luxury homes, executive offices, hospitality spaces and turnkey renovations.",
 };
 
 export default function StudioPage() {

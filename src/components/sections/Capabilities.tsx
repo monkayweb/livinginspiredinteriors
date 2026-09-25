@@ -16,10 +16,10 @@ export default function Capabilities() {
           />
           <FadeIn className="md:col-span-5 md:col-start-8">
             <p className="t-body opacity-60">
-              From full scale renovations and new builds to bespoke furniture,
-              custom joinery, lighting design, art curation and project
-              management, every element is considered so the result reads as one
-              piece of work.
+              A complete turnkey interior design service for residential and
+              commercial projects. From concept and spatial planning to bespoke
+              manufacture, procurement, installation and final styling, every
+              element is managed as one piece of work.
             </p>
           </FadeIn>
         </div>
