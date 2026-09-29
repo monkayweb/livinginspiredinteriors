@@ -25,6 +25,8 @@ export default function RecognitionView() {
           <ul>
             {recognition.map((item, i) => {
               const isOpen = open === i;
+              const images =
+                "gallery" in item && item.gallery ? item.gallery : [item.image];
               return (
                 <li key={item.title} className="border-t border-current/15 last:border-b">
                   <button
@@ -64,18 +66,35 @@ export default function RecognitionView() {
                         className="overflow-hidden"
                       >
                         <div className="grid gap-8 pb-12 md:grid-cols-12 md:gap-6">
-                          <div className="md:col-span-4 md:col-start-2">
-                            <div className="media relative aspect-[4/5] w-full">
-                              <Image
-                                src={item.image}
-                                alt=""
-                                fill
-                                sizes="(max-width: 768px) 100vw, 40vw"
-                                className="object-cover"
-                              />
-                            </div>
+                          <div
+                            className={`grid gap-5 md:col-start-2 ${
+                              images.length > 1
+                                ? "md:col-span-7 md:grid-cols-2"
+                                : "md:col-span-4"
+                            }`}
+                          >
+                            {images.map((image, imageIndex) => (
+                              <div
+                                key={image}
+                                className="media relative aspect-[4/5] w-full bg-white"
+                              >
+                                <Image
+                                  src={image}
+                                  alt={`${item.title}${images.length > 1 ? `, page ${imageIndex + 1}` : ""}`}
+                                  fill
+                                  sizes="(max-width: 768px) 100vw, 36vw"
+                                  className="object-contain"
+                                />
+                              </div>
+                            ))}
                           </div>
-                          <p className="t-body max-w-[52ch] self-start opacity-70 md:col-span-5 md:col-start-7">
+                          <p
+                            className={`t-body max-w-[52ch] self-start opacity-70 ${
+                              images.length > 1
+                                ? "md:col-span-3 md:col-start-10"
+                                : "md:col-span-5 md:col-start-7"
+                            }`}
+                          >
                             {item.body}
                           </p>
                         </div>

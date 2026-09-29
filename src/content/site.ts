@@ -30,6 +30,7 @@ export const site = {
 export const nav = [
   { label: "Studio", href: "/studio" },
   { label: "Projects", href: "/projects" },
+  { label: "Perspectives", href: "/perspectives" },
   { label: "Recognition", href: "/recognition" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -41,42 +42,49 @@ export const manifestoSupport =
   "Led by founder and creative director Tanya Solomon, we design with intention, blending elegance, functionality and wellness to craft environments that spark joy, nurture connection and elevate daily living. Rooted in collaboration, conscious craftsmanship and storytelling through design, we curate interiors that are both aesthetically striking and deeply personal.";
 
 export const profile = [
-  "Living Inspired Interiors is a boutique interior architecture and design studio specialising in bespoke residential and commercial interiors throughout South Africa and internationally.",
-  "Founded in 2020 by Tanya Solomon, the studio was established with a vision of creating highly personalised spaces that enrich everyday living through thoughtful design, exceptional craftsmanship and intentional curation.",
-  "Our work goes beyond decorating interiors. Every project begins by understanding how our clients live, work and experience their environments. We believe successful design should not only be visually beautiful but should improve wellbeing, encourage connection and stand the test of time.",
-  "Within five years the studio has become recognised for refined, luxurious spaces characterised by layered textures, bespoke detailing, sculptural lighting and sophisticated material palettes. Each project reflects our philosophy that luxury lies in craftsmanship, authenticity and meticulous attention to detail.",
+  "Living Inspired Interiors is a Johannesburg-based design studio specialising in full-scope residential and commercial interiors across South Africa and beyond.",
+  "Our work is rooted in layered storytelling, conscious craftsmanship and purposeful design. We believe spaces should do more than look beautiful. They should feel intentional, elevate daily living and reflect the soul of the people who inhabit them.",
+  "From bespoke joinery and curated art sourcing to large-scale renovations and commercial projects, every design is led with a strategic yet deeply personal approach.",
+  "Collaboration with local artisans and suppliers is central to our process, ensuring every space carries authenticity, heritage and refined detail.",
+];
+
+export const founderProfile = [
+  "As the founder of Living Inspired Interiors, I create layered, soulful spaces that blend elegance, wellness and functionality. I work closely with my clients to craft interiors that tell their story, from bespoke furniture pieces to full residential and commercial renovations.",
+  "I am deeply inspired by African heritage, natural textures and intentional living. Collaboration with local artisans and conscious suppliers is at the heart of my design philosophy.",
+  "As a businesswoman, mother of three and creative entrepreneur, I understand the importance of spaces that nurture connection, growth and balance.",
+  "I do not just design homes and offices. I curate environments that support the lives lived within them.",
 ];
 
 export const capabilities = [
   {
     title: "Residential and commercial interiors",
     body: "Luxury homes, executive offices and boutique hospitality spaces, each tailored to the people who live, work and gather there.",
-    image: "/images/sandown-dining-hero.jpg",
+    image: "/images/sandown-enhanced/dining-hero.jpg",
   },
   {
     title: "New builds and renovations",
     body: "Interior planning, space planning and full home transformations, from the earliest architectural decisions to the finished interior.",
-    image: "/images/athol-covered-patio.jpg",
+    image: "/images/athol/enhanced/covered-patio.jpg",
   },
   {
     title: "Kitchens, bathrooms and joinery",
     body: "Detailed kitchen, bathroom and cloakroom schemes, together with bespoke cabinetry, panelling and custom architectural elements.",
-    image: "/images/sandown-dining-detail.jpg",
+    image: "/images/sandown-enhanced/dining-detail.jpg",
   },
   {
     title: "Furniture, lighting and decoration",
     body: "Custom furniture, decorative lighting, window treatments, soft furnishings, rugs, wall finishes and considered room refreshes.",
-    image: "/images/athol-pendant-detail.jpg",
+    image: "/images/athol/enhanced/pendant-detail.jpg",
   },
   {
     title: "Curation and specification",
     body: "Concepts, mood boards and photorealistic renders through to material palettes, paint colours, art, accessories and complete FF&E specifications.",
-    image: "/images/sandown-tv-lounge-art.jpg",
+    image: "/images/sandown-enhanced/tv-lounge-art.jpg",
   },
   {
     title: "Turnkey project delivery",
     body: "Procurement, supplier management, custom manufacturing, project coordination, installation and final styling, overseen as one continuous process.",
-    image: "/images/sandown-formal-lounge.jpg",
+    image: "/images/sandown-enhanced/formal-lounge.jpg",
   },
 ];
 
@@ -114,31 +122,35 @@ export const approach = [
 export const recognition = [
   {
     year: "2025",
+    title: "Tasteful and Refined cover property",
+    outlet: "SA Home Owner Magazine",
+    body: "The Houghton Residence was selected as the October 2025 cover property for SA Home Owner Magazine. The feature, Tasteful and Refined, presents Living Inspired Interiors' full interior design, custom furniture and product sourcing, joinery, material selection and final styling across the home.",
+    image: "/images/press/sa-home-owner-october-2025-cover.jpeg",
+    gallery: [
+      "/images/press/sa-home-owner-october-2025-cover.jpeg",
+      "/images/press/sa-home-owner-tasteful-and-refined.jpeg",
+    ],
+  },
+  {
+    year: "2025",
     title: "Women in Design",
     outlet: "SA Home Owner Magazine",
     body: "Living Inspired Interiors was recognised by SA Home Owner Magazine as one of South Africa's leading Women in Design, celebrating Tanya Solomon's contribution to the industry and her growing influence as a female entrepreneur within the South African design landscape.",
-    image: "/images/sandown-formal-lounge-portrait.jpg",
+    image: "/images/sandown-enhanced/formal-lounge-portrait.jpg",
   },
   {
     year: "2025",
     title: "Design 100",
     outlet: "Design 100",
     body: "The studio was honoured as part of the prestigious Design 100, recognising Living Inspired Interiors among the country's most exciting and influential emerging design studios. The acknowledgement reflects a dedication to exceptional design, bespoke detailing and interiors that are both timeless and deeply personal.",
-    image: "/images/sandown-dining-overhead.jpg",
+    image: "/images/sandown-enhanced/dining-overhead.jpg",
   },
   {
     year: "2024",
     title: "Guest speaker and industry expert",
     outlet: "Decorex Africa",
     body: "Living Inspired Interiors was invited to participate in Decorex Africa, one of the continent's leading design exhibitions, where Tanya Solomon contributed as a guest speaker and industry expert on contemporary interior design, entrepreneurship and creating meaningful spaces.",
-    image: "/images/sandown-dining-angle.jpg",
-  },
-  {
-    year: "2023",
-    title: "Cover feature and editorials",
-    outlet: "SA Home Owner Magazine",
-    body: "The studio has been featured in SA Home Owner Magazine on numerous occasions, culminating in a magazine cover feature. These editorials showcased the studio's design philosophy, bespoke residential projects and commitment to refined, luxurious interiors that reflect each client's lifestyle.",
-    image: "/images/athol-principal-suite.jpg",
+    image: "/images/sandown-enhanced/dining-angle.jpg",
   },
 ];
 
@@ -189,18 +201,18 @@ export const projects: Project[] = [
       "The two storey home features five en suite bedrooms, a pyjama lounge, formal lounge, TV lounge, kids lounge, poolside patio and covered patio.",
       "It includes two double garages, a pool and deck, a main kitchen, walk in fridge, pantry, breakfast area and bar.",
     ],
-    cover: "/images/sandown-dining-hero.jpg",
+    cover: "/images/hero-enhanced/sandown-hero-4k.jpg",
     gallery: [
-      { src: "/images/sandown-dining-hero.jpg", caption: "Double volume dining room", span: "half" },
-      { src: "/images/sandown-dining-angle.jpg", caption: "Oversized pendant installation", span: "half" },
-      { src: "/images/sandown-dining-overhead.jpg", caption: "Bespoke solid oak twelve seater", span: "full" },
-      { src: "/images/sandown-dining-detail.jpg", caption: "Oak grain and dried arrangements", span: "half" },
-      { src: "/images/sandown-formal-lounge.jpg", caption: "Formal lounge", span: "half" },
-      { src: "/images/sandown-formal-lounge-portrait.jpg", caption: "Formal lounge with Tanya Solomon", span: "full" },
-      { src: "/images/sandown-tv-lounge.jpg", caption: "TV lounge", span: "half" },
-      { src: "/images/sandown-tv-lounge-sheers.jpg", caption: "Velvet seating against sheers", span: "half" },
-      { src: "/images/sandown-tv-lounge-art.jpg", caption: "Curated artwork and mirror composition", span: "half" },
-      { src: "/images/sandown-guest-suite.jpg", caption: "Guest suite in monochrome", span: "half" },
+      { src: "/images/sandown-enhanced/dining-hero.jpg", caption: "Double volume dining room", span: "half" },
+      { src: "/images/sandown-enhanced/dining-angle.jpg", caption: "Oversized pendant installation", span: "half" },
+      { src: "/images/sandown-enhanced/dining-overhead.jpg", caption: "Bespoke solid oak twelve seater", span: "full" },
+      { src: "/images/sandown-enhanced/dining-detail.jpg", caption: "Oak grain and dried arrangements", span: "half" },
+      { src: "/images/sandown-enhanced/formal-lounge.jpg", caption: "Formal lounge", span: "half" },
+      { src: "/images/sandown-enhanced/formal-lounge-portrait.jpg", caption: "Formal lounge with Tanya Solomon", span: "full" },
+      { src: "/images/sandown-enhanced/tv-lounge.jpg", caption: "TV lounge", span: "half" },
+      { src: "/images/sandown-enhanced/tv-lounge-sheers.jpg", caption: "Velvet seating against sheers", span: "half" },
+      { src: "/images/sandown-enhanced/tv-lounge-art.jpg", caption: "Curated artwork and mirror composition", span: "half" },
+      { src: "/images/sandown-enhanced/guest-suite.jpg", caption: "Guest suite in monochrome", span: "half" },
     ],
     teams: [
       { role: "Hard furniture", name: "Landmarq Road" },
@@ -241,13 +253,16 @@ export const projects: Project[] = [
       "Landmark Consortium are the developers behind this contemporary 22 home lifestyle estate, three minutes from Melrose Arch.",
       "The estate features a residential park, top tier security and high quality construction, with three, four and five bedroom layouts ranging from 367 to 560 sqm.",
     ],
-    cover: "/images/athol-principal-suite.jpg",
+    cover: "/images/hero-enhanced/athol-hero-4k.jpg",
     gallery: [
-      { src: "/images/athol-principal-suite.jpg", caption: "Principal suite", span: "half" },
-      { src: "/images/athol-bedroom-pendants.jpg", caption: "Shell pendants over timber panelling", span: "half" },
-      { src: "/images/athol-pendant-detail.jpg", caption: "Pendant and bedside detail", span: "full" },
-      { src: "/images/athol-covered-patio.jpg", caption: "Covered patio and pool", span: "half" },
-      { src: "/images/athol-breakfast-nook.jpg", caption: "Breakfast area", span: "half" },
+      { src: "/images/athol/enhanced/principal-suite.jpg", caption: "Principal suite", span: "half" },
+      { src: "/images/athol/enhanced/bedroom-pendants.jpg", caption: "Shell pendants over timber panelling", span: "half" },
+      { src: "/images/athol/enhanced/pendant-detail.jpg", caption: "Pendant and bedside detail", span: "full" },
+      { src: "/images/athol/enhanced/covered-patio.jpg", caption: "Covered patio and pool", span: "half" },
+      { src: "/images/athol/enhanced/breakfast-nook.jpg", caption: "Breakfast area", span: "half" },
+      { src: "/images/athol/enhanced/pool-deck.jpg", caption: "Pool deck and outdoor living", span: "full" },
+      { src: "/images/athol/enhanced/art-console.jpg", caption: "Art and console composition", span: "half" },
+      { src: "/images/athol/enhanced/patio-overhead.jpg", caption: "Indoor outdoor connection", span: "half" },
     ],
     teams: [
       { role: "Hard furniture", name: "Landmarq Road" },
@@ -264,6 +279,85 @@ export const projects: Project[] = [
       "Tirmah Rugs",
       "Intercarpets",
     ],
+  },
+  {
+    slug: "houghton-residence",
+    index: "03",
+    title: "Houghton Residence",
+    subtitle: "Warm timber, sculptural forms and art-led spaces in quiet dialogue.",
+    location: "Houghton, Johannesburg",
+    shortLocation: "Houghton, Johannesburg",
+    year: "2026",
+    timeline: "Full-scope interior design",
+    type: "Private residential",
+    size: "Whole-home interior",
+    style: ["Warm modernism", "Art-led", "Bespoke joinery"],
+    intro:
+      "The Houghton Residence is shaped by warmth, rhythm and restraint, bringing sculptural furniture, expressive art and finely detailed joinery together in a home designed for both gathering and retreat.",
+    body: [
+      "A natural material palette connects the rooms while allowing each space to hold its own character. Oak joinery, tactile upholstery and softly veined stone create a calm architectural base, with curated artwork introducing energy and individuality.",
+      "The open-plan living areas were composed as a sequence of intimate moments rather than one continuous room. Curved seating, layered rugs and considered lighting soften the scale, while screens and bespoke cabinetry create definition without interrupting the flow of light.",
+      "Throughout the home, functional elements become part of the visual language. Storage is integrated, display shelving is treated as architecture and furniture is positioned to support the rituals of everyday living.",
+    ],
+    site: [
+      "The residence balances generous shared spaces with quieter, more intimate rooms.",
+      "A double-volume core brings natural light deep into the plan and connects the primary living areas.",
+      "Indoor and outdoor rooms are linked through a restrained material palette and continuous sightlines.",
+    ],
+    cover: "/images/hero-enhanced/houghton-hero-4k.jpg",
+    gallery: [
+      { src: "/images/houghton/double-volume-living-enhanced.jpg", caption: "Double-volume living room", span: "half" },
+      { src: "/images/houghton/open-plan-living-enhanced.jpg", caption: "Open-plan living", span: "half" },
+      { src: "/images/houghton/living-room-enhanced.jpg", caption: "Layered lounge setting", span: "full" },
+      { src: "/images/houghton/dining-room-enhanced.jpg", caption: "Dining room and bespoke furniture", span: "half" },
+      { src: "/images/houghton/dining-overhead-enhanced.jpg", caption: "Dining composition", span: "half" },
+      { src: "/images/houghton/timber-screen-enhanced.jpg", caption: "Timber screen and curated art", span: "full" },
+      { src: "/images/houghton/kitchen-detail-enhanced.jpg", caption: "Kitchen material detail", span: "half" },
+      { src: "/images/houghton/guest-bedroom-enhanced.jpg", caption: "Guest bedroom", span: "half" },
+      { src: "/images/houghton/pool-courtyard-enhanced.jpg", caption: "Pool courtyard", span: "full" },
+      { src: "/images/houghton/tanya-at-home-enhanced.jpg", caption: "Tanya Solomon in the residence", span: "half" },
+    ],
+    teams: [{ role: "Interior design", name: "Living Inspired Interiors" }],
+    suppliers: ["Local artisans", "Conscious suppliers", "Bespoke manufacturers"],
+  },
+  {
+    slug: "sandton-concept",
+    index: "04",
+    title: "Sandton Concept",
+    subtitle: "A layered residential vision balancing softness, structure and adaptability.",
+    location: "Sandton, Johannesburg",
+    shortLocation: "Sandton, Johannesburg",
+    year: "2026",
+    timeline: "Concept development",
+    type: "Residential concept",
+    size: "Full-scope interiors",
+    style: ["Quiet luxury", "Organic forms", "Flexible living"],
+    intro:
+      "This Sandton concept explores a quietly luxurious home where organic silhouettes, purposeful joinery and a restrained palette create spaces that feel composed, adaptable and emotionally grounding.",
+    body: [
+      "The scheme is built around sensorial contrast. Soft upholstery sits against architectural timber, dark stone anchors pale rooms and sculptural lighting adds rhythm without visual noise.",
+      "Shared spaces are designed to shift throughout the day. Furniture groupings define zones for conversation, dining and retreat, while concealed storage and integrated joinery keep the broader plan calm and fluid.",
+      "These renders form part of the studio's design development process, making proportion, materiality and movement visible before manufacture and installation begin.",
+    ],
+    site: [
+      "The concept connects formal, family and outdoor living through a continuous material language.",
+      "Courtyards and generous glazing bring landscape and natural light into the centre of the home.",
+      "Bespoke joinery supports adaptable living while keeping technology and storage discreet.",
+    ],
+    cover: "/images/hero-enhanced/sandton-hero-4k.jpg",
+    gallery: [
+      { src: "/images/sandton/formal-lounge-enhanced.jpg", caption: "Formal lounge concept", span: "half" },
+      { src: "/images/sandton/dining-room-enhanced.jpg", caption: "Dining room concept", span: "half" },
+      { src: "/images/sandton/outdoor-living-enhanced.jpg", caption: "Outdoor living concept", span: "full" },
+      { src: "/images/sandton/principal-suite-enhanced.jpg", caption: "Principal suite concept", span: "half" },
+      { src: "/images/sandton/green-lounge-enhanced.jpg", caption: "Family lounge concept", span: "half" },
+      { src: "/images/sandton/kitchen-dining-enhanced.jpg", caption: "Kitchen and dining concept", span: "full" },
+      { src: "/images/sandton/entrance-courtyard-enhanced.jpg", caption: "Entrance courtyard concept", span: "half" },
+      { src: "/images/sandton/pool-courtyard-enhanced.jpg", caption: "Pool courtyard concept", span: "half" },
+      { src: "/images/sandton/wine-lounge-enhanced.jpg", caption: "Wine lounge concept", span: "full" },
+    ],
+    teams: [{ role: "Interior design and visualisation", name: "Living Inspired Interiors" }],
+    suppliers: ["To be specified", "Bespoke manufacture", "Local craftsmanship"],
   },
 ];
 

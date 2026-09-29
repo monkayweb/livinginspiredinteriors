@@ -5,6 +5,7 @@ import {
   approach,
   collaborators,
   distinction,
+  founderProfile,
   profile,
   site,
 } from "@/content/site";
@@ -32,12 +33,12 @@ export default function StudioView() {
         <div className="shell">
           <ClipReveal>
             <ParallaxMedia
-              src="/images/sandown-dining-angle.jpg"
+              src="/images/sandown-enhanced/dining-angle.jpg"
               alt="Double volume dining room with sculptural pendant installation"
               sizes="100vw"
               strength={12}
               className="aspect-[4/5] w-full md:aspect-[16/8]"
-              priority
+              eager
             />
           </ClipReveal>
         </div>
@@ -129,8 +130,8 @@ export default function StudioView() {
         <div className="shell grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-5">
             <ClipReveal>
-              <ParallaxMedia
-                src="/images/sandown-formal-lounge-portrait.jpg"
+            <ParallaxMedia
+              src="/images/studio/tanya-solomon-founder-enhanced.jpg"
                 alt="Tanya Solomon, founder and creative director"
                 sizes="(max-width: 768px) 100vw, 42vw"
                 strength={10}
@@ -148,16 +149,13 @@ export default function StudioView() {
             <FadeIn>
               <span className="t-body opacity-50">{site.founder.role}</span>
             </FadeIn>
-            <FadeIn delay={0.05}>
-              <p className="t-body max-w-[54ch] opacity-75">
-                Tanya founded Living Inspired Interiors in 2020 with a vision of
-                creating highly personalised spaces that enrich everyday living.
-                Her work has been recognised by SA Home Owner Magazine as one of
-                South Africa&apos;s leading Women in Design, featured in the
-                Design 100, and presented at Decorex Africa as a guest speaker
-                and industry expert.
-              </p>
-            </FadeIn>
+            <div className="flex flex-col gap-5">
+              {founderProfile.map((paragraph, index) => (
+                <FadeIn key={paragraph} delay={0.05 + index * 0.04}>
+                  <p className="t-body max-w-[54ch] opacity-75">{paragraph}</p>
+                </FadeIn>
+              ))}
+            </div>
             <FadeIn delay={0.1}>
               <div className="flex flex-wrap gap-8">
                 <Link

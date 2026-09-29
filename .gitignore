@@ -42,3 +42,6 @@ next-env.d.ts
 
 # atomic task state (local tooling)
 .atomic/
+
+# raw client media intake (curated copies live in public/)
+/tanya/

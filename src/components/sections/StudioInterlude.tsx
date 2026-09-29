@@ -12,7 +12,7 @@ export default function StudioInterlude() {
         <div className="col-span-8 md:col-span-5">
           <ClipReveal>
             <ParallaxMedia
-              src="/images/sandown-formal-lounge-portrait.jpg"
+              src="/images/sandown-enhanced/formal-lounge-portrait.jpg"
               alt="Tanya Solomon in the formal lounge of the Sandown Residence"
               sizes="(max-width: 768px) 66vw, 42vw"
               strength={10}
@@ -24,7 +24,7 @@ export default function StudioInterlude() {
         <div className="col-span-4 self-end md:col-span-3 md:pb-16">
           <ClipReveal delay={0.15}>
             <ParallaxMedia
-              src="/images/athol-pendant-detail.jpg"
+              src="/images/athol/enhanced/pendant-detail.jpg"
               alt="Pendant and bedside detail at Athol House"
               sizes="(max-width: 768px) 33vw, 25vw"
               strength={16}

@@ -35,9 +35,10 @@ export default function ProjectView({
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
-  const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1.02, 1.1]);
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "-2%"]);
+  const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "-18%"]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.58, 0.92], [1, 1, 0]);
 
   const meta = [
     { label: "Location", value: project.location },
@@ -51,21 +52,21 @@ export default function ProjectView({
       <section
         ref={heroRef}
         data-surface="dark"
-        className="relative flex h-[92svh] min-h-[560px] items-end overflow-hidden bg-ink text-paper"
+        className="relative flex h-[100svh] min-h-[560px] items-end overflow-hidden bg-paper text-paper"
       >
         <motion.div style={{ scale: heroScale, y: heroY }} className="absolute inset-0">
           <motion.div
-            initial={{ scale: 1.12, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.6, ease: EASE_OUT_EXPO }}
-            style={{ willChange: "transform, opacity" }}
+            initial={{ scale: 1.08 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.45, ease: EASE_OUT_EXPO }}
+            style={{ willChange: "transform" }}
             className="relative h-full w-full"
           >
             <Image
               src={project.cover}
               alt={project.title}
               fill
-              priority
+              loading="eager"
               sizes="100vw"
               className="object-cover"
             />
@@ -73,7 +74,10 @@ export default function ProjectView({
           </motion.div>
         </motion.div>
 
-        <motion.div style={{ y: titleY }} className="relative z-10 w-full pb-10 md:pb-14">
+        <motion.div
+          style={{ y: titleY, opacity: titleOpacity }}
+          className="relative z-10 w-full pb-10 md:pb-14"
+        >
           <div className="shell">
             <motion.span
               initial={{ opacity: 0 }}
@@ -103,6 +107,7 @@ export default function ProjectView({
             </motion.p>
           </div>
         </motion.div>
+
       </section>
 
       <section data-surface="light" className="bg-paper text-ink py-20 md:py-28">

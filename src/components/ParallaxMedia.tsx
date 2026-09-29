@@ -10,14 +10,14 @@ export default function ParallaxMedia({
   className = "",
   sizes = "100vw",
   strength = 12,
-  priority = false,
+  eager = false,
 }: {
   src: string;
   alt: string;
   className?: string;
   sizes?: string;
   strength?: number;
-  priority?: boolean;
+  eager?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -50,7 +50,7 @@ export default function ParallaxMedia({
           alt={alt}
           fill
           sizes={sizes}
-          priority={priority}
+          loading={eager ? "eager" : "lazy"}
           className="object-cover"
         />
       </motion.div>

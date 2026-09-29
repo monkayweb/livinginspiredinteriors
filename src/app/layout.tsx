@@ -45,12 +45,12 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_ZA",
     type: "website",
-    images: ["/images/sandown-dining-hero.jpg"],
+    images: ["/images/sandown-enhanced/dining-hero.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
-    images: ["/images/sandown-dining-hero.jpg"],
+    images: ["/images/sandown-enhanced/dining-hero.jpg"],
   },
 };
 
