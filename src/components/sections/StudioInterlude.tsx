@@ -9,31 +9,19 @@ export default function StudioInterlude() {
   return (
     <section data-surface="light" className="bg-paper text-ink pb-28 md:pb-44">
       <div className="shell grid grid-cols-12 gap-6 md:gap-10">
-        <div className="col-span-8 md:col-span-5">
+        <div className="col-span-12 md:col-span-7">
           <ClipReveal>
             <ParallaxMedia
-              src="/images/sandown-enhanced/formal-lounge-portrait.jpg"
+              src="/images/imagegen/sandown/formal-lounge-portrait.jpg"
               alt="Tanya Solomon in the formal lounge of the Sandown Residence"
-              sizes="(max-width: 768px) 66vw, 42vw"
+              sizes="(max-width: 768px) 100vw, 58vw"
               strength={10}
-              className="aspect-[4/5] w-full"
+              className="aspect-[4/5] w-full md:aspect-[3/4]"
             />
           </ClipReveal>
         </div>
 
-        <div className="col-span-4 self-end md:col-span-3 md:pb-16">
-          <ClipReveal delay={0.15}>
-            <ParallaxMedia
-              src="/images/athol/enhanced/pendant-detail.jpg"
-              alt="Pendant and bedside detail at Athol House"
-              sizes="(max-width: 768px) 33vw, 25vw"
-              strength={16}
-              className="aspect-[3/4] w-full"
-            />
-          </ClipReveal>
-        </div>
-
-        <div className="col-span-12 flex flex-col justify-end gap-7 pt-6 md:col-span-3 md:pb-16 md:pt-0">
+        <div className="col-span-12 flex flex-col justify-end gap-7 pt-6 md:col-span-4 md:col-start-9 md:pb-16 md:pt-0">
           <SplitWords
             as="p"
             text="Luxury lies in craftsmanship, authenticity and meticulous attention to detail."

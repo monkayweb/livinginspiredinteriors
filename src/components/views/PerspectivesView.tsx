@@ -8,7 +8,7 @@ const perspectives = [
   {
     index: "01",
     title: "Design concepts redefining residential interiors",
-    image: "/images/houghton/open-plan-living-enhanced.jpg",
+    image: "/images/imagegen/houghton/open-plan-living.jpg",
     paragraphs: [
       "2026 will be shaped by authenticity, adaptability and sensorial design. Homeowners are no longer seeking spaces that simply look beautiful. They crave interiors that feel emotionally grounding and deeply personal.",
       "At Living Inspired Interiors, we are leaning into layered textural storytelling, where craftsmanship, lighting and materiality work together to create an immersive sense of home.",
@@ -19,7 +19,7 @@ const perspectives = [
   {
     index: "02",
     title: "Sustainability and mindful materials",
-    image: "/images/houghton/timber-screen-enhanced.jpg",
+    image: "/images/imagegen/houghton/timber-screen.jpg",
     paragraphs: [
       "Sustainability has moved far beyond trend status. It is a new baseline for conscious living. For 2026, we are seeing a rise in reclaimed materials, low-impact finishes and artisanal production methods that celebrate craftsmanship while reducing environmental load.",
       "I am particularly excited about material innovations: engineered stones with recycled content, tactile fabrics with low chemical impact and timber alternatives that offer both beauty and responsibility.",

@@ -210,10 +210,10 @@ export default function ProjectView({
         </div>
       </section>
 
-      {/* Site and teams ------------------------------------------------ */}
+      {/* Site ---------------------------------------------------------- */}
       <section data-surface="dark" className="bg-ink py-24 text-paper md:py-36">
         <div className="shell grid gap-14 md:grid-cols-12 md:gap-10">
-          <div className="md:col-span-5">
+          <div className="md:col-span-8">
             <SplitWords
               as="h2"
               text="The site"
@@ -222,39 +222,10 @@ export default function ProjectView({
             <div className="mt-8 flex flex-col gap-5">
               {project.site.map((line, i) => (
                 <FadeIn key={i} delay={i * 0.05}>
-                  <p className="t-body max-w-[46ch] opacity-65">{line}</p>
+                  <p className="t-body max-w-[62ch] opacity-65">{line}</p>
                 </FadeIn>
               ))}
             </div>
-          </div>
-
-          <div className="md:col-span-3 md:col-start-7">
-            <FadeIn>
-              <span className="t-small opacity-40">Teams</span>
-            </FadeIn>
-            <ul className="mt-6 flex flex-col gap-4">
-              {project.teams.map((t, i) => (
-                <FadeIn key={t.role} delay={i * 0.04}>
-                  <li className="flex flex-col gap-1">
-                    <span className="t-body">{t.name}</span>
-                    <span className="t-small opacity-40">{t.role}</span>
-                  </li>
-                </FadeIn>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-2 md:col-start-11">
-            <FadeIn>
-              <span className="t-small opacity-40">Suppliers</span>
-            </FadeIn>
-            <ul className="mt-6 flex flex-col gap-3">
-              {project.suppliers.map((s, i) => (
-                <FadeIn key={s} delay={i * 0.03}>
-                  <li className="t-body opacity-75">{s}</li>
-                </FadeIn>
-              ))}
-            </ul>
           </div>
         </div>
       </section>

@@ -45,12 +45,12 @@ export const profile = [
   "Living Inspired Interiors is a Johannesburg-based design studio specialising in full-scope residential and commercial interiors across South Africa and beyond.",
   "Our work is rooted in layered storytelling, conscious craftsmanship and purposeful design. We believe spaces should do more than look beautiful. They should feel intentional, elevate daily living and reflect the soul of the people who inhabit them.",
   "From bespoke joinery and curated art sourcing to large-scale renovations and commercial projects, every design is led with a strategic yet deeply personal approach.",
-  "Collaboration with local artisans and suppliers is central to our process, ensuring every space carries authenticity, heritage and refined detail.",
+  "Collaboration with local artisans is central to our process, ensuring every space carries authenticity, heritage and refined detail.",
 ];
 
 export const founderProfile = [
   "As the founder of Living Inspired Interiors, I create layered, soulful spaces that blend elegance, wellness and functionality. I work closely with my clients to craft interiors that tell their story, from bespoke furniture pieces to full residential and commercial renovations.",
-  "I am deeply inspired by African heritage, natural textures and intentional living. Collaboration with local artisans and conscious suppliers is at the heart of my design philosophy.",
+  "I am deeply inspired by African heritage, natural textures and intentional living. Collaboration with local artisans and considered craftsmanship is at the heart of my design philosophy.",
   "As a businesswoman, mother of three and creative entrepreneur, I understand the importance of spaces that nurture connection, growth and balance.",
   "I do not just design homes and offices. I curate environments that support the lives lived within them.",
 ];
@@ -59,39 +59,39 @@ export const capabilities = [
   {
     title: "Residential and commercial interiors",
     body: "Luxury homes, executive offices and boutique hospitality spaces, each tailored to the people who live, work and gather there.",
-    image: "/images/sandown-enhanced/dining-hero.jpg",
+    image: "/images/imagegen/sandown/dining-hero.jpg",
   },
   {
     title: "New builds and renovations",
     body: "Interior planning, space planning and full home transformations, from the earliest architectural decisions to the finished interior.",
-    image: "/images/athol/enhanced/covered-patio.jpg",
+    image: "/images/imagegen/athol/covered-patio.jpg",
   },
   {
     title: "Kitchens, bathrooms and joinery",
     body: "Detailed kitchen, bathroom and cloakroom schemes, together with bespoke cabinetry, panelling and custom architectural elements.",
-    image: "/images/sandown-enhanced/dining-detail.jpg",
+    image: "/images/imagegen/sandown/dining-detail.jpg",
   },
   {
     title: "Furniture, lighting and decoration",
     body: "Custom furniture, decorative lighting, window treatments, soft furnishings, rugs, wall finishes and considered room refreshes.",
-    image: "/images/athol/enhanced/pendant-detail.jpg",
+    image: "/images/imagegen/athol/pendant-detail.jpg",
   },
   {
     title: "Curation and specification",
     body: "Concepts, mood boards and photorealistic renders through to material palettes, paint colours, art, accessories and complete FF&E specifications.",
-    image: "/images/sandown-enhanced/tv-lounge-art.jpg",
+    image: "/images/imagegen/sandown/tv-lounge-art.jpg",
   },
   {
     title: "Turnkey project delivery",
-    body: "Procurement, supplier management, custom manufacturing, project coordination, installation and final styling, overseen as one continuous process.",
-    image: "/images/sandown-enhanced/formal-lounge.jpg",
+    body: "Procurement, custom manufacturing, project coordination, installation and final styling, overseen as one continuous process.",
+    image: "/images/imagegen/sandown/formal-lounge.jpg",
   },
 ];
 
 export const distinction = {
   title: "We curate lifestyles, not simply spaces.",
   paragraphs: [
-    "Every project is approached with meticulous attention to detail, balancing beauty with practicality while collaborating with South Africa's finest artisans, manufacturers and suppliers. Exceptional design emerges through the thoughtful layering of texture, material, lighting, bespoke craftsmanship and timeless pieces, creating spaces with enduring character.",
+    "Every project is approached with meticulous attention to detail, balancing beauty with practicality while honouring South African craft. Exceptional design emerges through the thoughtful layering of texture, material, lighting, bespoke craftsmanship and timeless pieces, creating spaces with enduring character.",
     "Our hands-on approach means we personally oversee every stage of the journey, from initial concept and technical detailing through procurement, custom manufacturing, installation and final styling. The result is a highly personalised interior, delivered with professionalism, care and a clear sense of purpose.",
   ],
 };
@@ -136,21 +136,21 @@ export const recognition = [
     title: "Women in Design",
     outlet: "SA Home Owner Magazine",
     body: "Living Inspired Interiors was recognised by SA Home Owner Magazine as one of South Africa's leading Women in Design, celebrating Tanya Solomon's contribution to the industry and her growing influence as a female entrepreneur within the South African design landscape.",
-    image: "/images/sandown-enhanced/formal-lounge-portrait.jpg",
+    image: "/images/imagegen/sandown/formal-lounge-portrait.jpg",
   },
   {
     year: "2025",
     title: "Design 100",
     outlet: "Design 100",
     body: "The studio was honoured as part of the prestigious Design 100, recognising Living Inspired Interiors among the country's most exciting and influential emerging design studios. The acknowledgement reflects a dedication to exceptional design, bespoke detailing and interiors that are both timeless and deeply personal.",
-    image: "/images/sandown-enhanced/dining-overhead.jpg",
+    image: "/images/imagegen/sandown/dining-overhead.jpg",
   },
   {
     year: "2024",
     title: "Guest speaker and industry expert",
     outlet: "Decorex Africa",
     body: "Living Inspired Interiors was invited to participate in Decorex Africa, one of the continent's leading design exhibitions, where Tanya Solomon contributed as a guest speaker and industry expert on contemporary interior design, entrepreneurship and creating meaningful spaces.",
-    image: "/images/sandown-enhanced/dining-angle.jpg",
+    image: "/images/imagegen/sandown/dining-angle.jpg",
   },
 ];
 
@@ -171,8 +171,6 @@ export type Project = {
   site: string[];
   cover: string;
   gallery: { src: string; caption: string; span?: "full" | "half" }[];
-  teams: { role: string; name: string }[];
-  suppliers: string[];
 };
 
 export const projects: Project[] = [
@@ -203,31 +201,16 @@ export const projects: Project[] = [
     ],
     cover: "/images/hero-enhanced/sandown-hero-4k.jpg",
     gallery: [
-      { src: "/images/sandown-enhanced/dining-hero.jpg", caption: "Double volume dining room", span: "half" },
-      { src: "/images/sandown-enhanced/dining-angle.jpg", caption: "Oversized pendant installation", span: "half" },
-      { src: "/images/sandown-enhanced/dining-overhead.jpg", caption: "Bespoke solid oak twelve seater", span: "full" },
-      { src: "/images/sandown-enhanced/dining-detail.jpg", caption: "Oak grain and dried arrangements", span: "half" },
-      { src: "/images/sandown-enhanced/formal-lounge.jpg", caption: "Formal lounge", span: "half" },
-      { src: "/images/sandown-enhanced/formal-lounge-portrait.jpg", caption: "Formal lounge with Tanya Solomon", span: "full" },
-      { src: "/images/sandown-enhanced/tv-lounge.jpg", caption: "TV lounge", span: "half" },
-      { src: "/images/sandown-enhanced/tv-lounge-sheers.jpg", caption: "Velvet seating against sheers", span: "half" },
-      { src: "/images/sandown-enhanced/tv-lounge-art.jpg", caption: "Curated artwork and mirror composition", span: "half" },
-      { src: "/images/sandown-enhanced/guest-suite.jpg", caption: "Guest suite in monochrome", span: "half" },
-    ],
-    teams: [
-      { role: "Hard furniture", name: "Landmarq Road" },
-      { role: "Soft furniture", name: "Gracious Living Spaces" },
-      { role: "Joinery", name: "Designer Projects" },
-      { role: "Cushions", name: "RJL Interiors" },
-    ],
-    suppliers: [
-      "Home Fabrics",
-      "Warwick",
-      "Hertex",
-      "Casamance",
-      "Jaipur Rugs",
-      "Romo",
-      "ADF Outdoor",
+      { src: "/images/imagegen/sandown/dining-hero.jpg", caption: "Double volume dining room", span: "half" },
+      { src: "/images/imagegen/sandown/dining-angle.jpg", caption: "Oversized pendant installation", span: "half" },
+      { src: "/images/imagegen/sandown/dining-overhead.jpg", caption: "Bespoke solid oak twelve seater", span: "full" },
+      { src: "/images/imagegen/sandown/dining-detail.jpg", caption: "Oak grain and dried arrangements", span: "half" },
+      { src: "/images/imagegen/sandown/formal-lounge.jpg", caption: "Formal lounge", span: "half" },
+      { src: "/images/imagegen/sandown/formal-lounge-portrait.jpg", caption: "Formal lounge with Tanya Solomon", span: "full" },
+      { src: "/images/imagegen/sandown/tv-lounge.jpg", caption: "TV lounge", span: "half" },
+      { src: "/images/imagegen/sandown/tv-lounge-sheers.jpg", caption: "Velvet seating against sheers", span: "half" },
+      { src: "/images/imagegen/sandown/tv-lounge-art.jpg", caption: "Curated artwork and mirror composition", span: "half" },
+      { src: "/images/imagegen/sandown/guest-suite.jpg", caption: "Guest suite in monochrome", span: "half" },
     ],
   },
   {
@@ -255,29 +238,14 @@ export const projects: Project[] = [
     ],
     cover: "/images/hero-enhanced/athol-hero-4k.jpg",
     gallery: [
-      { src: "/images/athol/enhanced/principal-suite.jpg", caption: "Principal suite", span: "half" },
-      { src: "/images/athol/enhanced/bedroom-pendants.jpg", caption: "Shell pendants over timber panelling", span: "half" },
-      { src: "/images/athol/enhanced/pendant-detail.jpg", caption: "Pendant and bedside detail", span: "full" },
-      { src: "/images/athol/enhanced/covered-patio.jpg", caption: "Covered patio and pool", span: "half" },
-      { src: "/images/athol/enhanced/breakfast-nook.jpg", caption: "Breakfast area", span: "half" },
-      { src: "/images/athol/enhanced/pool-deck.jpg", caption: "Pool deck and outdoor living", span: "full" },
-      { src: "/images/athol/enhanced/art-console.jpg", caption: "Art and console composition", span: "half" },
-      { src: "/images/athol/enhanced/patio-overhead.jpg", caption: "Indoor outdoor connection", span: "half" },
-    ],
-    teams: [
-      { role: "Hard furniture", name: "Landmarq Road" },
-      { role: "Soft furniture", name: "Gracious Living Spaces" },
-      { role: "Joinery", name: "Designer Projects" },
-      { role: "Curtaining", name: "RJL Interiors" },
-      { role: "Wallpaper installation", name: "CP Decor" },
-    ],
-    suppliers: [
-      "Home Fabrics",
-      "Warwick",
-      "Hertex",
-      "Casamance",
-      "Tirmah Rugs",
-      "Intercarpets",
+      { src: "/images/imagegen/athol/principal-suite.jpg", caption: "Principal suite", span: "half" },
+      { src: "/images/imagegen/athol/bedroom-pendants.jpg", caption: "Shell pendants over timber panelling", span: "half" },
+      { src: "/images/imagegen/athol/pendant-detail.jpg", caption: "Pendant and bedside detail", span: "full" },
+      { src: "/images/imagegen/athol/covered-patio.jpg", caption: "Covered patio and pool", span: "half" },
+      { src: "/images/imagegen/athol/breakfast-nook.jpg", caption: "Breakfast area", span: "half" },
+      { src: "/images/imagegen/athol/pool-deck.jpg", caption: "Pool deck and outdoor living", span: "full" },
+      { src: "/images/imagegen/athol/art-console.jpg", caption: "Art and console composition", span: "half" },
+      { src: "/images/imagegen/athol/patio-overhead.jpg", caption: "Indoor outdoor connection", span: "half" },
     ],
   },
   {
@@ -306,19 +274,17 @@ export const projects: Project[] = [
     ],
     cover: "/images/hero-enhanced/houghton-hero-4k.jpg",
     gallery: [
-      { src: "/images/houghton/double-volume-living-enhanced.jpg", caption: "Double-volume living room", span: "half" },
-      { src: "/images/houghton/open-plan-living-enhanced.jpg", caption: "Open-plan living", span: "half" },
-      { src: "/images/houghton/living-room-enhanced.jpg", caption: "Layered lounge setting", span: "full" },
-      { src: "/images/houghton/dining-room-enhanced.jpg", caption: "Dining room and bespoke furniture", span: "half" },
-      { src: "/images/houghton/dining-overhead-enhanced.jpg", caption: "Dining composition", span: "half" },
-      { src: "/images/houghton/timber-screen-enhanced.jpg", caption: "Timber screen and curated art", span: "full" },
-      { src: "/images/houghton/kitchen-detail-enhanced.jpg", caption: "Kitchen material detail", span: "half" },
-      { src: "/images/houghton/guest-bedroom-enhanced.jpg", caption: "Guest bedroom", span: "half" },
-      { src: "/images/houghton/pool-courtyard-enhanced.jpg", caption: "Pool courtyard", span: "full" },
-      { src: "/images/houghton/tanya-at-home-enhanced.jpg", caption: "Tanya Solomon in the residence", span: "half" },
+      { src: "/images/imagegen/houghton/double-volume-living.jpg", caption: "Double-volume living room", span: "half" },
+      { src: "/images/imagegen/houghton/open-plan-living.jpg", caption: "Open-plan living", span: "half" },
+      { src: "/images/imagegen/houghton/living-room.jpg", caption: "Layered lounge setting", span: "full" },
+      { src: "/images/imagegen/houghton/dining-room.jpg", caption: "Dining room and bespoke furniture", span: "half" },
+      { src: "/images/imagegen/houghton/dining-overhead.jpg", caption: "Dining composition", span: "half" },
+      { src: "/images/imagegen/houghton/timber-screen.jpg", caption: "Timber screen and curated art", span: "full" },
+      { src: "/images/imagegen/houghton/kitchen-detail.jpg", caption: "Kitchen material detail", span: "half" },
+      { src: "/images/imagegen/houghton/guest-bedroom.jpg", caption: "Guest bedroom", span: "half" },
+      { src: "/images/imagegen/houghton/pool-courtyard.jpg", caption: "Pool courtyard", span: "full" },
+      { src: "/images/imagegen/houghton/tanya-at-home.jpg", caption: "Tanya Solomon in the residence", span: "half" },
     ],
-    teams: [{ role: "Interior design", name: "Living Inspired Interiors" }],
-    suppliers: ["Local artisans", "Conscious suppliers", "Bespoke manufacturers"],
   },
   {
     slug: "sandton-concept",
@@ -356,30 +322,11 @@ export const projects: Project[] = [
       { src: "/images/sandton/pool-courtyard-enhanced.jpg", caption: "Pool courtyard concept", span: "half" },
       { src: "/images/sandton/wine-lounge-enhanced.jpg", caption: "Wine lounge concept", span: "full" },
     ],
-    teams: [{ role: "Interior design and visualisation", name: "Living Inspired Interiors" }],
-    suppliers: ["To be specified", "Bespoke manufacture", "Local craftsmanship"],
   },
 ];
 
 export const getProject = (slug: string) =>
   projects.find((p) => p.slug === slug);
-
-export const collaborators = [
-  "Landmarq Road",
-  "Gracious Living Spaces",
-  "Designer Projects",
-  "RJL Interiors",
-  "CP Decor",
-  "Home Fabrics",
-  "Warwick",
-  "Hertex",
-  "Casamance",
-  "Romo",
-  "Jaipur Rugs",
-  "Tirmah Rugs",
-  "Intercarpets",
-  "ADF Outdoor",
-];
 
 export const facts = [
   { label: "Established", value: "2020" },

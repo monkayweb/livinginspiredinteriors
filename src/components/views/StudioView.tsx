@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   approach,
-  collaborators,
   distinction,
   founderProfile,
   profile,
@@ -33,7 +32,7 @@ export default function StudioView() {
         <div className="shell">
           <ClipReveal>
             <ParallaxMedia
-              src="/images/sandown-enhanced/dining-angle.jpg"
+              src="/images/imagegen/sandown/dining-angle.jpg"
               alt="Double volume dining room with sculptural pendant installation"
               sizes="100vw"
               strength={12}
@@ -175,27 +174,6 @@ export default function StudioView() {
               </div>
             </FadeIn>
           </div>
-        </div>
-      </section>
-
-      <section data-surface="light" className="bg-paper text-ink pb-28 md:pb-40">
-        <div className="shell">
-          <AnimatedRule />
-          <FadeIn>
-            <p className="t-small pt-6 opacity-40">
-              Makers, suppliers and collaborators
-            </p>
-          </FadeIn>
-
-          <ul className="grid grid-cols-2 gap-x-8 gap-y-5 pt-10 md:grid-cols-4 md:gap-y-7">
-            {collaborators.map((name, i) => (
-              <FadeIn key={name} delay={(i % 4) * 0.05}>
-                <li className="display t-md leading-tight opacity-70">
-                  {name}
-                </li>
-              </FadeIn>
-            ))}
-          </ul>
         </div>
       </section>
     </>
